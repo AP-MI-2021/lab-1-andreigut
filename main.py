@@ -62,31 +62,34 @@ def main():
   2. Product
   3. Cmmdc v1
   4. Cmmdc v2''')
-  x = int(input("Comanda="))
-  if(x == 1):
-    n=int(input("Introduceti n="))
-    print(is_prime(n))
+  while(True):
+    x = int(input("Comanda="))
+    if(x == 1):
+      n=int(input("Introduceti n="))
+      print(is_prime(n))
 
-  if (x == 2):
-    n = int(input("Introduceti n="))
-    list = []
-    for i in range(0,n):
-      element = int(input())
-      list.append(element)
-    print(get_product(list))
+    if (x == 2):
+      n = int(input("Introduceti n="))
+      list = []
+      for i in range(0,n):
+        element = int(input())
+        list.append(element)
+      print(get_product(list))
 
-  if (x == 3):
-    n = int(input("Introduceti n="))
-    m = int(input("Introduceti m="))
-    print(get_cmmdc_v1(n, m))
+    if (x == 3):
+      n = int(input("Introduceti n="))
+      m = int(input("Introduceti m="))
+      print(get_cmmdc_v1(n, m))
 
-  if (x == 4):
-    n = int(input("Introduceti n="))
-    m = int(input("Introduceti m="))
-    print(get_cmmdc_v2(n, m))
+    if (x == 4):
+      n = int(input("Introduceti n="))
+      m = int(input("Introduceti m="))
+      print(get_cmmdc_v2(n, m))
 
-  if x not in [1,2,3,4]:
-    print("No identifiable option, bye.")
+    if x not in [1,2,3,4]:
+      print("No identifiable option, bye.")
+      break
+  print("Loop is closed")
 
 if __name__ == '__main__':
   main()
