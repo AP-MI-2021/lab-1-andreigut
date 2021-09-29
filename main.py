@@ -12,7 +12,7 @@ def is_prime(n):
     return True
   if n % 2 == 0:
     return False
-  for i in range(3, int(sqrt(n)) + 1, 2):
+  for i in range(2, n):
     if n % i == 0:
       return False
   return True
@@ -52,7 +52,7 @@ Returneaza CMMDC a doua numere x si y folosind al doilea algoritm.
 def get_cmmdc_v2(x, y):
   while(x != 0):
     aux = x
-    x = x % y
+    x = y % x
     y = aux
   return y
 
